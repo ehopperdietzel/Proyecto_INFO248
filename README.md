@@ -1,6 +1,8 @@
 # Proyecto_INFO248
 Proyecto para curso ingeniería de software INFO248.
 
+![](https://i.imgur.com/p4JXuWn.png)
+
 ### Docente:
 
 - Raimundo Vega
