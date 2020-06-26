@@ -1,0 +1,14 @@
+{
+  "admin_user":"admin",
+  "admin_pass":"admin",
+  "mysql_host":"localhost",
+  "mysql_user":"",
+  "mysql_pass":"",
+  "mysql_db":"",
+  "host":"",
+  "image_quality":60,
+  "facebook": "calzadospaillaco",
+  "instagram": "calzadospaillaco",
+  "email": "calzados@paillaco.cl",
+  "whatsapp": "+56932456477"
+}
