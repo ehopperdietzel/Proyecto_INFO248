@@ -23,34 +23,7 @@
   margin-top: 8px;
   margin-left: 8px
 }
-#tabs
-{
-  display: flex;
-}
-.tab
-{
-  cursor: pointer;
-  height: 100%;
-  padding-left: 4vw;
-  padding-right: 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.tab .text
-{
-  color:#444;
-}
-.tab .selectIndicator
-{
-  display:none;
-  position: absolute;
-  bottom: 0;
-  width:100%;
-  height:4px;
-  background: #444;
-}
+
 #shopping-btn
 {
   height: 30px;
@@ -58,6 +31,25 @@
 }
 .section
 {
-  height:calc(100vh - 60px);
+  height:calc(100vh - 78px);
   width:100vw;
+  display: none;
+  overflow-y: auto;
+}
+#footer
+{
+  width:100vw;
+  height:18px;
+  text-align: center;
+  font-size:10px;
+  line-height: 18px;
+  color:#444;
+}
+
+@media only screen and (max-width: 750px)
+{
+  #text-logo
+  {
+    display:none;
+  }
 }

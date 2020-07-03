@@ -10,19 +10,20 @@
 **
 ******************************************/
 
+var tabsManager, loginModal;
+
 // Elementos del DOM
-var tabs, tabSelectIndicators, sections;
-
-// Variables de Estado
-var currentTab = "tab-1";
-
+var sections, adminBtn, userInput, passInput, loginBtn;
 
 // Obtiene los elementos del DOM
 function getElements()
 {
-  tabs = $(".tab");
-  tabSelectIndicators = $(".selectIndicator");
   sections = $(".section");
+  adminBtn = $("#adminBtn");
+  userInput = $('<input type="text" placeholder="Usuario">');
+  passInput = $('<input type="password" placeholder="Contraseña">');
+  loginBtn = $('<button>Siguiente</button>');
+
 }
 
 // Inicializa las secciones
@@ -34,62 +35,59 @@ function setupSections()
   contactSec.setup();
 }
 
-// Inicializa los eventos de las pestañas
 function setupTabs()
 {
-  // Al hacer click en una pestaña
-  tabs.on("click",function()
-  {
-    // Obtiene el id de la pestaña
-    var tab = $(this).attr("id");
-
-    // Se detiene si es la pestaña actual
-    if( tab == currentTab) return;
-
-    // Almacena la pestaña actual
-    currentTab = tab;
-
-    // Oculta todas las pestañas y secciones
-    tabSelectIndicators.hide(128);
-    sections.hide();
-
-    // Muestra la pestaña actual
-    $(this).find(".selectIndicator").show(128);
-
-    // Muestra la sección asociada
-    switch (tab)
+  tabsManager = new TabsManager('#tabs');
+  tabsManager.setTabs([
     {
-      // Welcome
-      case "tab-1":
-        {
-          welcomeSec.loadView();
-        }
-        break;
-
-      // Products
-      case "tab-2":
-        {
-          productsSec.loadView();
-        }
-        break;
-
-      // History
-      case "tab-3":
-        {
-          historySec.loadView();
-        }
-        break;
-
-      // Contact
-      case "tab-4":
-        {
-          contactSec.loadView();
-        }
-        break;
-      default:
-
+      default:true,
+      text:"Inicio",
+      onClick:function()
+      {
+        sections.hide();
+        welcomeSec.loadView();
+      }
+    },
+    {
+      text:"Productos",
+      onClick:function()
+      {
+        sections.hide();
+        productsSec.loadView();
+      }
+    },
+    {
+      text:"Historia",
+      onClick:function()
+      {
+        sections.hide();
+        historySec.loadView();
+      }
+    },
+    {
+      text:"Contacto",
+      onClick:function()
+      {
+        sections.hide();
+        contactSec.loadView();
+      }
     }
+  ]);
+}
+
+function setupAdminModal()
+{
+  loginModal = new Modal();
+
+  loginModal.addElement($('<h4>ADMINISTRADOR</h4>'));
+  loginModal.addElement(userInput);
+  loginModal.addElement(passInput);
+  loginModal.addElement(loginBtn);
+
+  adminBtn.click(function(){
+    loginModal.show()
   });
+
 }
 
 // Cuando la página termina de cargar
@@ -98,4 +96,5 @@ $(document).ready(function()
   getElements();
   setupSections();
   setupTabs();
+  setupAdminModal();
 });

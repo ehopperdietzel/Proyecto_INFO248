@@ -1,4 +1,12 @@
 #section-4
 {
-  background:#FF0;
+
+}
+
+@media only screen and (max-width: 580px)
+{
+  #contacts a
+  {
+    font-size: 12px;
+  }
 }

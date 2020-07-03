@@ -1,4 +1,15 @@
 #section-3
 {
-  background:#00F;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+@media only screen and (max-width: 580px)
+{
+  #section-3
+  {
+    width:calc(100vw - 32px);
+    padding-left:16px;
+    padding-right:16px;
+  }
 }

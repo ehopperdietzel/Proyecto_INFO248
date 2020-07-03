@@ -19,5 +19,11 @@ var historySec =
   setup:function()
   {
     this.dom.section = $("#section-3");
+
+    this.converter = new showdown.Converter(),
+    this.text      = '# Historia\n Este texto fue escrito en formato MarkDown y convertido a HTML.',
+    this.html      = this.converter.makeHtml(this.text);
+
+    this.dom.section.html(this.html);
   }
 };
