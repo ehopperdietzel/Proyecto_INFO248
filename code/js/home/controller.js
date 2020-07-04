@@ -88,6 +88,30 @@ function setupAdminModal()
     loginModal.show()
   });
 
+  loginBtn.click(function()
+  {
+    $.ajax(
+      {
+        url : '/api/v1/admin/login',
+        type : 'post',
+        data :
+        {
+          username:userInput.val(),
+          password:passInput.val()
+        },
+        error:function (response)
+        {
+          console.log(response);
+          //debug(response);
+          //notify("error","Se ha perdido la conexión con el servidor.")
+        },
+        success:function (response)
+        {
+          window.location.href = "/";
+        }
+    });
+  });
+
 }
 
 // Cuando la página termina de cargar
@@ -98,3 +122,68 @@ $(document).ready(function()
   setupTabs();
   setupAdminModal();
 });
+
+
+// Admin Logout
+function test1()
+{
+  $.ajax(
+    {
+      url : '/api/v1/admin/logout',
+      type : 'get',
+      error:function (response)
+      {
+        console.log(response);
+      },
+      success:function (response)
+      {
+        console.log(response);
+        //window.location.href = "/";
+      }
+  });
+}
+
+// New Slide
+function test2()
+{
+  $.ajax(
+    {
+      url : '/api/v1/slides',
+      type : 'post',
+      data :
+      {
+        request:'new'
+      },
+      error:function (response)
+      {
+        console.log(response);
+      },
+      success:function (response)
+      {
+        console.log(response);
+      }
+  });
+}
+
+// Delete Slide
+function test3()
+{
+  $.ajax(
+    {
+      url : '/api/v1/slides',
+      type : 'post',
+      data :
+      {
+        request:'delete',
+        id:2
+      },
+      error:function (response)
+      {
+        console.log(response);
+      },
+      success:function (response)
+      {
+        console.log(response);
+      }
+  });
+}

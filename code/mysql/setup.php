@@ -66,6 +66,7 @@ $sql = "CREATE TABLE slides (
   id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   position INT(8) UNSIGNED,
   contain BIT(1) DEFAULT b'0',
+  visible BIT(1) DEFAULT b'0',
   image INT(8) UNSIGNED DEFAULT 1,
   FOREIGN KEY (image) REFERENCES images(id)
 )";

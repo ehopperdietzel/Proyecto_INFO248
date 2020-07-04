@@ -1,6 +1,8 @@
-## Realizar Pedido
+# Productos
 
-Permite al cliente realizar un pedido.
+## Listar Visibles
+
+Lista los productos visibles por los clientes.
 
 ### Método
 
@@ -11,7 +13,7 @@ Permite al cliente realizar un pedido.
   </tr>
   <tr>
     <td>Path</td>
-    <td>/client/orders.php</td>
+    <td>/products</td>
   </tr>
   <tr>
     <td>Autentificación</td>
@@ -30,75 +32,150 @@ Permite al cliente realizar un pedido.
   <tr>
     <td>request</td>
     <td>String</td>
-    <td>Identifica la petición, debe contener "new".</td>
+    <td>Identifica la petición, debe contener "list".</td>
+  </tr>
+</table>
+
+### Respuesta
+
+Retorna un arreglo de objetos en formato JSON con los siguientes parámetros:
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
   </tr>
   <tr>
-    <td>fname</td>
-    <td>String</td>
-    <td>Nombre del Cliente.</td>
-  </tr>
-  <tr>
-    <td>lname</td>
-    <td>String</td>
-    <td>Apellido del Cliente.</td>
-  </tr>
-  <tr>
-    <td>email</td>
-    <td>String</td>
-    <td>Email del Cliente.</td>
-  </tr>
-  <tr>
-    <td>phone</td>
+    <td>id</td>
     <td>Entero</td>
-    <td>Teléfono del Cliente.</td>
+    <td>ID del producto</td>
   </tr>
   <tr>
-    <td>products</td>
+    <td>title</td>
+    <td>String</td>
+    <td>Nombre del producto</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>String</td>
+    <td>Descripción del producto</td>
+  </tr>
+  <tr>
+    <td>defaultPrice</td>
+    <td>Entero</td>
+    <td>Precio por defecto</td>
+  </tr>
+  <tr>
+    <td>defaultImage</td>
+    <td>String</td>
+    <td>URL de la imagen por defecto</td>
+  </tr>
+  <tr>
+    <td>categories</td>
     <td>Arreglo de Objetos</td>
-    <td>Poductos del Pedido.</td>
+    <td>Lista de categorías a las cuales pertenece el producto</td>
+  </tr>
+  <tr>
+    <td>customizable</td>
+    <td>Bool</td>
+    <td>Indica si el producto es customizable</td>
+  </tr>
+  <tr>
+    <td>customizations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de customizaciones junto con sus opciones</td>
+  </tr>
+  <tr>
+    <td>variations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de variaciones del producto</td>
   </tr>
 </table>
 
-### Respuesta
+Donde los objetos del parámetro "categories" tiene la siguiente estructura:
 
-Retorna el ID del pedido.
-
-
-
-## Listar de Productos
-
-Retorna un arreglo con las noticias creadas por el administrador.
-
-### Método
-
-<table class="met">
+<table class="jsn">
   <tr>
-    <td>Método</td>
-    <td>GET</td>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
   </tr>
   <tr>
-    <td>Path</td>
-    <td>/productos/list.php</td>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la categoría</td>
   </tr>
   <tr>
-    <td>Autentificación</td>
-    <td>No</td>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la categoría</td>
   </tr>
 </table>
 
-### Envío
+Los objetos del parámetro "customizations" tiene la siguiente estructura:
 
-...
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la customización</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la customización</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de opciones ( id y nombre de la opción)</td>
+  </tr>
+</table>
 
-### Respuesta
+Los objetos del parámetro "variations" tiene la siguiente estructura:
 
-Retorna un arreglo de objetos JSON, con el siguiente formato...
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la variación</td>
+  </tr>
+  <tr>
+    <td>productId</td>
+    <td>Entero</td>
+    <td>ID del producto asociado</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>String</td>
+    <td>URL de la imagen alternativa</td>
+  </tr>
+  <tr>
+    <td>price</td>
+    <td>Entero</td>
+    <td>Precio de la variación</td>
+  </tr>
+  <tr>
+    <td>optionsCombination</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de las combinaciónes de customizaciones que generan esta variación (ID de la costomización, ID de su opción)</td>
+  </tr>
+</table>
 
-## Login Admin
+## Listar Todos
 
-Genera una PHP SESSION para manejar la sesión del administrador.<br>
-El servidor retorna una cookie "admin_token", con el token de la sesión.<br>
-Esta cookie se debe enviar en cada request para mantener la sesión.<br>
+Lista todos los productos.
 
 ### Método
 
@@ -109,11 +186,11 @@ Esta cookie se debe enviar en cada request para mantener la sesión.<br>
   </tr>
   <tr>
     <td>Path</td>
-    <td>/admin/login.php</td>
+    <td>/products</td>
   </tr>
   <tr>
     <td>Autentificación</td>
-    <td>No</td>
+    <td>Administrador</td>
   </tr>
 </table>
 
@@ -126,68 +203,15 @@ Esta cookie se debe enviar en cada request para mantener la sesión.<br>
     <td>Descripción</td>
   </tr>
   <tr>
-    <td>username</td>
+    <td>request</td>
     <td>String</td>
-    <td>Nombre de usuario del administrador.</td>
-  </tr>
-  <tr>
-    <td>password</td>
-    <td>String</td>
-    <td>Constraseña del administrador.</td>
+    <td>Identifica la petición, debe contener "listAll".</td>
   </tr>
 </table>
 
 ### Respuesta
 
-Cookie de nombre "admin_token", con el token de la sesión.
-
-## Logout Admin
-
-Elimina la sesión PHP del administrador, junto con sus cookies.
-
-### Método
-
-<table class="met">
-  <tr>
-    <td>Método</td>
-    <td>GET</td>
-  </tr>
-  <tr>
-    <td>Path</td>
-    <td>/admin/logout.php</td>
-  </tr>
-  <tr>
-    <td>Autentificación</td>
-    <td>No</td>
-  </tr>
-</table>
-
-### Respuesta
-
-Redirecciona a la página de inicio.
-
-## Variables Globales
-
-Retorna una lista de variables globales, tales como ciudades, bancos, etc.
-
-### Método
-
-<table class="met">
-  <tr>
-    <td>Método</td>
-    <td>GET</td>
-  </tr>
-  <tr>
-    <td>Path</td>
-    <td>/lib/globalVariables.php</td>
-  </tr>
-  <tr>
-    <td>Autentificación</td>
-    <td>No</td>
-  </tr>
-</table>
-
-### Respuesta
+Retorna un arreglo de objetos en formato JSON con los siguientes parámetros:
 
 <table class="jsn">
   <tr>
@@ -196,78 +220,218 @@ Retorna una lista de variables globales, tales como ciudades, bancos, etc.
     <td>Descripción</td>
   </tr>
   <tr>
-    <td>banks</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre e indicador de eliminación de cada banco.</td>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del producto</td>
   </tr>
   <tr>
-    <td>cities</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre e indicador de eliminación de cada ciudad.</td>
-  </tr>
-  <tr>
-    <td>colleges</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre, ciudad, descuento e indicador de eliminación de cada colegio.</td>
-  </tr>
-  <tr>
-    <td>sectors</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre, ciudad, tarifa e indicador de eliminación de cada sector.</td>
-  </tr>
-  <tr>
-    <td>bankAccountTypes</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, y nombre de tipo de cuenta bancaria ( Corriente, Vista y Ahorro ).</td>
-  </tr>
-  <tr>
-    <td>colors</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre, y código hexadecimal de los colores utilizados en el sitio web.</td>
-  </tr>
-  <tr>
-    <td>months</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los meses del año ( ID desde 1 a 12 ).</td>
-  </tr>
-  <tr>
-    <td>weekDays</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los días de la semana ( ID desde 1 a 7 ).</td>
-  </tr>
-  <tr>
-    <td>depositStates</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los estados de un depósito ( Pendiente, Aceptado y Rechazado ).</td>
-  </tr>
-  <tr>
-    <td>orderStates</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los estados de un pedido ( Pendiente, Concretada y Cancelada ).</td>
-  </tr>
-  <tr>
-    <td>time</td>
+    <td>title</td>
     <td>String</td>
-    <td>Contiene la fecha y hora del sevidor en el formato "YYY-MM-DD-HH-MM-SS"</td>
+    <td>Nombre del producto</td>
   </tr>
   <tr>
-    <td>facebook</td>
+    <td>description</td>
     <td>String</td>
-    <td>Contiene el usuario de Facebook de la Empresa.</td>
+    <td>Descripción del producto</td>
   </tr>
   <tr>
-    <td>instagram</td>
-    <td>String</td>
-    <td>Contiene el usuario de Instagram de la Empresa.</td>
+    <td>defaultPrice</td>
+    <td>Entero</td>
+    <td>Precio por defecto</td>
   </tr>
   <tr>
-    <td>email</td>
+    <td>defaultImage</td>
     <td>String</td>
-    <td>Contiene el email de contacto de la Empresa.</td>
+    <td>URL de la imagen por defecto</td>
   </tr>
   <tr>
-    <td>whatsapp</td>
-    <td>String</td>
-    <td>Contiene el whatsapp de la Empresa.</td>
+    <td>categories</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de categorías a las cuales pertenece el producto</td>
+  </tr>
+  <tr>
+    <td>visible</td>
+    <td>Bool</td>
+    <td>Indica si el producto es visible por los clientes</td>
+  </tr>
+  <tr>
+    <td>customizable</td>
+    <td>Bool</td>
+    <td>Indica si el producto es customizable</td>
+  </tr>
+  <tr>
+    <td>customizations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de customizaciones junto con sus opciones</td>
+  </tr>
+  <tr>
+    <td>variations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de variaciones del producto</td>
   </tr>
 </table>
+
+Donde los objetos del parámetro "categories" tiene la siguiente estructura:
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la categoría</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la categoría</td>
+  </tr>
+</table>
+
+Los objetos del parámetro "customizations" tiene la siguiente estructura:
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la customización</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la customización</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de opciones ( id y nombre de la opción)</td>
+  </tr>
+</table>
+
+Los objetos del parámetro "variations" tiene la siguiente estructura:
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la variación</td>
+  </tr>
+  <tr>
+    <td>productId</td>
+    <td>Entero</td>
+    <td>ID del producto asociado</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>String</td>
+    <td>URL de la imagen alternativa</td>
+  </tr>
+  <tr>
+    <td>price</td>
+    <td>Entero</td>
+    <td>Precio de la variación</td>
+  </tr>
+  <tr>
+    <td>optionsCombination</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de las combinaciónes de customizaciones que generan esta variación (ID de la costomización, ID de su opción)</td>
+  </tr>
+</table>
+
+## Crear
+
+Crea un nuevo producto.
+
+### Método
+
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+
+### Envío
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "new".</td>
+  </tr>
+</table>
+
+### Respuesta
+
+Retorna el ID del nuevo producto.
+
+## Eliminar
+
+Elimina un producto junto con sus variaciones, y opciones de customización.
+
+### Método
+
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+
+### Envío
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "delete"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del producto a eliminar</td>
+  </tr>
+</table>
+
+### Respuesta
+
+Si el producto se elimina con éxito, retorna "Ok".

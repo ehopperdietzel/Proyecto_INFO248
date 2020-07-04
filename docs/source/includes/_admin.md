@@ -1,6 +1,6 @@
-# Admin
+# Administrador
 
-## login
+## Iniciar Sesión
 
 Genera una PHP SESSION para manejar la sesión del administrador.<br>
 El servidor retorna una cookie "admin_token", con el token de la sesión.<br>
@@ -12,6 +12,10 @@ Esta cookie se debe enviar en cada request para mantener la sesión.<br>
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
   </tr>
   <tr>
     <td>Path</td>
@@ -47,7 +51,7 @@ Esta cookie se debe enviar en cada request para mantener la sesión.<br>
 
 Cookie de nombre "admin_token", con el token de la sesión.
 
-## Logout Admin
+## Cerrar Sesión
 
 Elimina la sesión PHP del administrador, junto con sus cookies.
 
@@ -57,6 +61,10 @@ Elimina la sesión PHP del administrador, junto con sus cookies.
   <tr>
     <td>Método</td>
     <td>GET</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
   </tr>
   <tr>
     <td>Path</td>

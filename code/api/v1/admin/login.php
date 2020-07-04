@@ -1,6 +1,7 @@
 <?php
 
-include_once("../../lib/shared.php");
+include_once("../../lib/Request-Validator.php");
+
 
 // Parámetros requeridos
 requiredParams(array('username', 'password'));

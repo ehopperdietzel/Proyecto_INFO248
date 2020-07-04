@@ -166,12 +166,7 @@ switch ($req)
     if(sqlQuery($sql,true))
       exit("ok");
   }
-  // Modifica un pedido
-  case 'update':
-  {
-    // Verifica sesión
-    checkAdminLogin();
-  }
+
 
 }
 

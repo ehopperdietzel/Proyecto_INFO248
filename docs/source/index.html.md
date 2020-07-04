@@ -7,7 +7,15 @@ toc_footers:
 includes:
   - intro
   - admin
+  - categories
+  - conf
+  - contact
+  - customizations
+  - images
+  - orders
+  - options
   - products
+  - slides
 
 
 search: true

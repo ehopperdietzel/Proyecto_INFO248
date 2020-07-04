@@ -136,18 +136,18 @@ function validate($str,$type,$len=-1,$emptyCheck = false)
       httpError("El nombre contiene carácteres inválidos.");
       break;
     }
-    case 'product':
+    case 'slide':
     {
-      $str = validate($str,"number",6);
-      $count = count(sqlSearchToArray("SELECT * FROM products WHERE id=".$str));
-      if($count == 0) httpError("Producto no disponible.");
+      $str = validate($str,"number",8);
+      $count = count(sqlSearchToArray("SELECT id FROM slides WHERE id=".$str));
+      if($count == 0) httpError("Slide no existe.");
       break;
     }
-    case 'order':
+    case 'image':
     {
-      $str = validate($str,"number",6);
-      $count = count(sqlSearchToArray("SELECT * FROM orders WHERE id=".$str));
-      if($count == 0) httpError("Pedido no disponible.");
+      $str = validate($str,"number",8);
+      $count = count(sqlSearchToArray("SELECT id FROM images WHERE id=".$str));
+      if($count == 0) httpError("La imagen no existe.");
       break;
     }
     case 'rut':
@@ -168,6 +168,12 @@ function validate($str,$type,$len=-1,$emptyCheck = false)
       $str = trim($str);
       if(!preg_match("/^[_.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+.)+[a-zA-Z]{2,6}$/i",$str))
       httpError("Correo inválido.");
+      break;
+    }
+    case 'bool':
+    {
+      $str = validate($str,"number",1);
+      if($str != 0 && $str != 1) httpError("No es booleano.");
       break;
     }
     case 'number':

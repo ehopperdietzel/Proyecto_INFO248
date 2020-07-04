@@ -7,8 +7,6 @@
   "mysql_db":"calzadoslarapaillaco",
   "host":"",
   "image_quality":60,
-  "facebook": "calzadospaillaco",
-  "instagram": "calzadospaillaco",
-  "email": "calzados@paillaco.cl",
-  "whatsapp": "+56932456477"
+  "emailNotifications":false,
+  "notificationEmail": "calzados@paillaco.cl"
 }

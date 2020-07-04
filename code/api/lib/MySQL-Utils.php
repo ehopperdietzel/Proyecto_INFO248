@@ -72,4 +72,7 @@ function sqlSearchToArray($sql)
     httpError("MySQL Error:".$conn->error);
 }
 
+// Se conecta a la base de datos
+mysqlConnect();
+
 ?>
