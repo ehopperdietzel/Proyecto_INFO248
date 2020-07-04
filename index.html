@@ -42,7 +42,7 @@
 .highlight .cs {
   color: #75715e;
 }
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+.highlight .c, .highlight .cd {
   color: #75715e;
 }
 .highlight .err {
@@ -126,7 +126,7 @@
 .highlight .s1 {
   color: #e6db74;
 }
-.highlight .s, .highlight .sa, .highlight .dl {
+.highlight .s {
   color: #e6db74;
 }
 .highlight .na {
@@ -141,13 +141,16 @@
 .highlight .ne {
   color: #a6e22e;
 }
-.highlight .nf, .highlight .fm {
+.highlight .nf {
   color: #a6e22e;
 }
 .highlight .vc {
   color: #ffffff;
 }
 .highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
   color: #ffffff;
 }
 .highlight .ni {
@@ -162,7 +165,7 @@
 .highlight .vi {
   color: #ffffff;
 }
-.highlight .nv, .highlight .vm {
+.highlight .nv {
   color: #ffffff;
 }
 .highlight .w {
@@ -173,9 +176,6 @@
 }
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
-}
-.highlight .nl {
-  color: #f92672;
 }
 .highlight .ow {
   color: #f92672;
@@ -196,8 +196,8 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-0a7c4629.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print-c427a123.css" rel="stylesheet" media="print" />
+    <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-c5541673.js"></script>
   </head>
 
@@ -205,36 +205,173 @@
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar-cad8cdcb.png" alt="" />
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-f466fa73.png" class="logo" alt="" />
+      <img src="images/logo-f466fa73.png" class="logo" alt="Logo" />
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#api-rest" class="toc-h1 toc-link" data-title="API REST">API REST</a>
+            <a href="#introduccion" class="toc-h1 toc-link" data-title="Introducción">Introducción</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#introduccion-a-la-api" class="toc-h2 toc-link" data-title="Introducción a la API">Introducción a la API</a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#administrador" class="toc-h1 toc-link" data-title="Administrador">Administrador</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#realizar-pedido" class="toc-h2 toc-link" data-title="Realizar Pedido">Realizar Pedido</a>
+                    <a href="#iniciar-sesion" class="toc-h2 toc-link" data-title="Iniciar Sesión">Iniciar Sesión</a>
                   </li>
                   <li>
-                    <a href="#listar-de-productos" class="toc-h2 toc-link" data-title="Listar de Productos">Listar de Productos</a>
+                    <a href="#cerrar-sesion" class="toc-h2 toc-link" data-title="Cerrar Sesión">Cerrar Sesión</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#categorias" class="toc-h1 toc-link" data-title="Categorías">Categorías</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#crear" class="toc-h2 toc-link" data-title="Crear">Crear</a>
                   </li>
                   <li>
-                    <a href="#login-admin" class="toc-h2 toc-link" data-title="Login Admin">Login Admin</a>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
                   </li>
                   <li>
-                    <a href="#logout-admin" class="toc-h2 toc-link" data-title="Logout Admin">Logout Admin</a>
+                    <a href="#modificar" class="toc-h2 toc-link" data-title="Modificar">Modificar</a>
                   </li>
                   <li>
-                    <a href="#variables-globales" class="toc-h2 toc-link" data-title="Variables Globales">Variables Globales</a>
+                    <a href="#anadir-producto" class="toc-h2 toc-link" data-title="Añadir Producto">Añadir Producto</a>
+                  </li>
+                  <li>
+                    <a href="#quitar-producto" class="toc-h2 toc-link" data-title="Quitar Producto">Quitar Producto</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#configuraciones" class="toc-h1 toc-link" data-title="Configuraciones">Configuraciones</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#crear-db" class="toc-h2 toc-link" data-title="Crear DB">Crear DB</a>
+                  </li>
+                  <li>
+                    <a href="#notificaciones" class="toc-h2 toc-link" data-title="Notificaciones">Notificaciones</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#contacto" class="toc-h1 toc-link" data-title="Contacto">Contacto</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#crear" class="toc-h2 toc-link" data-title="Crear">Crear</a>
+                  </li>
+                  <li>
+                    <a href="#modificar" class="toc-h2 toc-link" data-title="Modificar">Modificar</a>
+                  </li>
+                  <li>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#customizaciones" class="toc-h1 toc-link" data-title="Customizaciones">Customizaciones</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#crear" class="toc-h2 toc-link" data-title="Crear">Crear</a>
+                  </li>
+                  <li>
+                    <a href="#modificar" class="toc-h2 toc-link" data-title="Modificar">Modificar</a>
+                  </li>
+                  <li>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#imagenes" class="toc-h1 toc-link" data-title="Imágenes">Imágenes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#listar" class="toc-h2 toc-link" data-title="Listar">Listar</a>
+                  </li>
+                  <li>
+                    <a href="#crear" class="toc-h2 toc-link" data-title="Crear">Crear</a>
+                  </li>
+                  <li>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#pedidos" class="toc-h1 toc-link" data-title="Pedidos">Pedidos</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#crear" class="toc-h2 toc-link" data-title="Crear">Crear</a>
+                  </li>
+                  <li>
+                    <a href="#crear-manualmente" class="toc-h2 toc-link" data-title="Crear Manualmente">Crear Manualmente</a>
+                  </li>
+                  <li>
+                    <a href="#modificar" class="toc-h2 toc-link" data-title="Modificar">Modificar</a>
+                  </li>
+                  <li>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#opciones" class="toc-h1 toc-link" data-title="Opciones">Opciones</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#anadir" class="toc-h2 toc-link" data-title="Añadir">Añadir</a>
+                  </li>
+                  <li>
+                    <a href="#modificar" class="toc-h2 toc-link" data-title="Modificar">Modificar</a>
+                  </li>
+                  <li>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#productos" class="toc-h1 toc-link" data-title="Productos">Productos</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#listar-visibles" class="toc-h2 toc-link" data-title="Listar Visibles">Listar Visibles</a>
+                  </li>
+                  <li>
+                    <a href="#listar-todos" class="toc-h2 toc-link" data-title="Listar Todos">Listar Todos</a>
+                  </li>
+                  <li>
+                    <a href="#crear" class="toc-h2 toc-link" data-title="Crear">Crear</a>
+                  </li>
+                  <li>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#slides" class="toc-h1 toc-link" data-title="Slides">Slides</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#crear" class="toc-h2 toc-link" data-title="Crear">Crear</a>
+                  </li>
+                  <li>
+                    <a href="#listar-visibles" class="toc-h2 toc-link" data-title="Listar Visibles">Listar Visibles</a>
+                  </li>
+                  <li>
+                    <a href="#listar-todos" class="toc-h2 toc-link" data-title="Listar Todos">Listar Todos</a>
+                  </li>
+                  <li>
+                    <a href="#eliminar" class="toc-h2 toc-link" data-title="Eliminar">Eliminar</a>
+                  </li>
+                  <li>
+                    <a href="#modificar" class="toc-h2 toc-link" data-title="Modificar">Modificar</a>
                   </li>
               </ul>
           </li>
@@ -256,18 +393,20 @@
   font-weight:bold;
 }
 </style>
-<h1 id='api-rest'>API REST</h1><h2 id='introduccion-a-la-api'>Introducción a la API</h2>
+<h1 id='introduccion'>Introducción</h1><h2 id='introduccion-a-la-api'>Introducción a la API</h2>
 <p>El sitio web cuenta con una API REST, para facilitar una futura implementación en dispositivos móviles.<br>
 Se utiliza principalmente el método POST, estructurando la información de envío y respuesta en formato JSON.</p>
 
-<p>En los llamados con método POST, puede existir más de una función para un mismo path, los cuales se diferencian por llave &quot;request&quot; del mensaje JSON.</p>
+<p>En los llamados con método POST, puede existir más de una función para un mismo servicio, los cuales se diferencian por llave &quot;request&quot; del mensaje JSON.</p>
 
 <p>Se indicará la nececidad de autentificación ( admin ), para algunos llamados.</p>
 
-<p>Las rutas a la cual se hacen todos los llamados se ecuentran en el directorio <code>/rest</code>, por lo tanto
-todos las rutas mencionadas a continuación partirán desde este directorio.</p>
-<h2 id='realizar-pedido'>Realizar Pedido</h2>
-<p>Permite al cliente realizar un pedido.</p>
+<p>Las rutas a la cual se hacen todos los llamados se ecuentran en el directorio <code>/api/v1/</code>, por lo tanto
+todos los servicios descritos a continuación partirán desde ese directorio.</p>
+<h1 id='administrador'>Administrador</h1><h2 id='iniciar-sesion'>Iniciar Sesión</h2>
+<p>Genera una PHP SESSION para manejar la sesión del administrador.<br>
+El servidor retorna una cookie &quot;admin_token&quot;, con el token de la sesión.<br>
+Esta cookie se debe enviar en cada request para mantener la sesión.<br></p>
 <h3 id='metodo'>Método</h3>
 <table class="met">
   <tr>
@@ -275,8 +414,12 @@ todos las rutas mencionadas a continuación partirán desde este directorio.</p>
     <td>POST</td>
   </tr>
   <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
     <td>Path</td>
-    <td>/client/orders.php</td>
+    <td>/admin/login</td>
   </tr>
   <tr>
     <td>Autentificación</td>
@@ -284,86 +427,6 @@ todos las rutas mencionadas a continuación partirán desde este directorio.</p>
   </tr>
 </table>
 <h3 id='envio'>Envío</h3>
-<table class="jsn">
-  <tr>
-    <td>Key</td>
-    <td>Tipo</td>
-    <td>Descripción</td>
-  </tr>
-  <tr>
-    <td>request</td>
-    <td>String</td>
-    <td>Identifica la petición, debe contener "new".</td>
-  </tr>
-  <tr>
-    <td>fname</td>
-    <td>String</td>
-    <td>Nombre del Cliente.</td>
-  </tr>
-  <tr>
-    <td>lname</td>
-    <td>String</td>
-    <td>Apellido del Cliente.</td>
-  </tr>
-  <tr>
-    <td>email</td>
-    <td>String</td>
-    <td>Email del Cliente.</td>
-  </tr>
-  <tr>
-    <td>phone</td>
-    <td>Entero</td>
-    <td>Teléfono del Cliente.</td>
-  </tr>
-  <tr>
-    <td>products</td>
-    <td>Arreglo de Objetos</td>
-    <td>Poductos del Pedido.</td>
-  </tr>
-</table>
-<h3 id='respuesta'>Respuesta</h3>
-<p>Retorna el ID del pedido.</p>
-<h2 id='listar-de-productos'>Listar de Productos</h2>
-<p>Retorna un arreglo con las noticias creadas por el administrador.</p>
-<h3 id='metodo-2'>Método</h3>
-<table class="met">
-  <tr>
-    <td>Método</td>
-    <td>GET</td>
-  </tr>
-  <tr>
-    <td>Path</td>
-    <td>/productos/list.php</td>
-  </tr>
-  <tr>
-    <td>Autentificación</td>
-    <td>No</td>
-  </tr>
-</table>
-<h3 id='envio-2'>Envío</h3>
-<p>...</p>
-<h3 id='respuesta-2'>Respuesta</h3>
-<p>Retorna un arreglo de objetos JSON, con el siguiente formato...</p>
-<h2 id='login-admin'>Login Admin</h2>
-<p>Genera una PHP SESSION para manejar la sesión del administrador.<br>
-El servidor retorna una cookie &quot;admin_token&quot;, con el token de la sesión.<br>
-Esta cookie se debe enviar en cada request para mantener la sesión.<br></p>
-<h3 id='metodo-3'>Método</h3>
-<table class="met">
-  <tr>
-    <td>Método</td>
-    <td>POST</td>
-  </tr>
-  <tr>
-    <td>Path</td>
-    <td>/admin/login.php</td>
-  </tr>
-  <tr>
-    <td>Autentificación</td>
-    <td>No</td>
-  </tr>
-</table>
-<h3 id='envio-3'>Envío</h3>
 <table class="jsn">
   <tr>
     <td>Key</td>
@@ -381,45 +444,49 @@ Esta cookie se debe enviar en cada request para mantener la sesión.<br></p>
     <td>Constraseña del administrador.</td>
   </tr>
 </table>
-<h3 id='respuesta-3'>Respuesta</h3>
+<h3 id='respuesta'>Respuesta</h3>
 <p>Cookie de nombre &quot;admin_token&quot;, con el token de la sesión.</p>
-<h2 id='logout-admin'>Logout Admin</h2>
+<h2 id='cerrar-sesion'>Cerrar Sesión</h2>
 <p>Elimina la sesión PHP del administrador, junto con sus cookies.</p>
-<h3 id='metodo-4'>Método</h3>
+<h3 id='metodo-2'>Método</h3>
 <table class="met">
   <tr>
     <td>Método</td>
     <td>GET</td>
   </tr>
   <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
     <td>Path</td>
-    <td>/admin/logout.php</td>
+    <td>/admin/logout</td>
   </tr>
   <tr>
     <td>Autentificación</td>
     <td>No</td>
   </tr>
 </table>
-<h3 id='respuesta-4'>Respuesta</h3>
-<p>Redirecciona a la página de inicio.</p>
-<h2 id='variables-globales'>Variables Globales</h2>
-<p>Retorna una lista de variables globales, tales como ciudades, bancos, etc.</p>
-<h3 id='metodo-5'>Método</h3>
+<h3 id='respuesta-2'>Respuesta</h3>
+<p>Retorna &quot;Ok&quot;.</p>
+<h1 id='categorias'>Categorías</h1><h2 id='crear'>Crear</h2>
+<p>Crea una nueva categoría de productos.</p>
+<h3 id='metodo'>Método</h3>
 <table class="met">
   <tr>
     <td>Método</td>
-    <td>GET</td>
+    <td>POST</td>
   </tr>
   <tr>
     <td>Path</td>
-    <td>/lib/globalVariables.php</td>
+    <td>/products</td>
   </tr>
   <tr>
     <td>Autentificación</td>
-    <td>No</td>
+    <td>Administrador</td>
   </tr>
 </table>
-<h3 id='respuesta-5'>Respuesta</h3>
+<h3 id='envio'>Envío</h3>
 <table class="jsn">
   <tr>
     <td>Key</td>
@@ -427,81 +494,1267 @@ Esta cookie se debe enviar en cada request para mantener la sesión.<br></p>
     <td>Descripción</td>
   </tr>
   <tr>
-    <td>banks</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre e indicador de eliminación de cada banco.</td>
-  </tr>
-  <tr>
-    <td>cities</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre e indicador de eliminación de cada ciudad.</td>
-  </tr>
-  <tr>
-    <td>colleges</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre, ciudad, descuento e indicador de eliminación de cada colegio.</td>
-  </tr>
-  <tr>
-    <td>sectors</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre, ciudad, tarifa e indicador de eliminación de cada sector.</td>
-  </tr>
-  <tr>
-    <td>bankAccountTypes</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, y nombre de tipo de cuenta bancaria ( Corriente, Vista y Ahorro ).</td>
-  </tr>
-  <tr>
-    <td>colors</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID, nombre, y código hexadecimal de los colores utilizados en el sitio web.</td>
-  </tr>
-  <tr>
-    <td>months</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los meses del año ( ID desde 1 a 12 ).</td>
-  </tr>
-  <tr>
-    <td>weekDays</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los días de la semana ( ID desde 1 a 7 ).</td>
-  </tr>
-  <tr>
-    <td>depositStates</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los estados de un depósito ( Pendiente, Aceptado y Rechazado ).</td>
-  </tr>
-  <tr>
-    <td>orderStates</td>
-    <td>Arreglo de Objetos</td>
-    <td>Contiene una lista de objetos, con el ID y nombre de los estados de un pedido ( Pendiente, Concretada y Cancelada ).</td>
-  </tr>
-  <tr>
-    <td>time</td>
+    <td>request</td>
     <td>String</td>
-    <td>Contiene la fecha y hora del sevidor en el formato "YYY-MM-DD-HH-MM-SS"</td>
+    <td>Identifica la petición, debe contener "newCategory".</td>
   </tr>
   <tr>
-    <td>facebook</td>
+    <td>name</td>
     <td>String</td>
-    <td>Contiene el usuario de Facebook de la Empresa.</td>
-  </tr>
-  <tr>
-    <td>instagram</td>
-    <td>String</td>
-    <td>Contiene el usuario de Instagram de la Empresa.</td>
-  </tr>
-  <tr>
-    <td>email</td>
-    <td>String</td>
-    <td>Contiene el email de contacto de la Empresa.</td>
-  </tr>
-  <tr>
-    <td>whatsapp</td>
-    <td>String</td>
-    <td>Contiene el whatsapp de la Empresa.</td>
+    <td>Nombre de la categoría.</td>
   </tr>
 </table>
+<h3 id='respuesta'>Respuesta</h3>
+<p>Retorna el ID de la nueva categoría.</p>
+<h2 id='eliminar'>Eliminar</h2>
+<p>Elimina una categoría de productos, sin eliminar los productos.</p>
+<h3 id='metodo-2'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-2'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "deleteCategory".</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la categoría.</td>
+  </tr>
+</table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<p>Si se elimina con éxito, retorna &quot;OK&quot;.</p>
+<h2 id='modificar'>Modificar</h2>
+<p>Cambia el nombre de una categoría de productos.</p>
+<h3 id='metodo-3'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-3'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "updateCategory".</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la categoría.</td>
+  </tr>
+</table>
+<h3 id='respuesta-3'>Respuesta</h3>
+<p>Si se cambia con éxito, retorna &quot;OK&quot;.</p>
+<h2 id='anadir-producto'>Añadir Producto</h2>
+<p>Añade un producto a una categoría.</p>
+<h3 id='metodo-4'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-4'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "addToCategory"</td>
+  </tr>
+  <tr>
+    <td>productId</td>
+    <td>Entero</td>
+    <td>ID del producto</td>
+  </tr>
+  <tr>
+    <td>categoryId</td>
+    <td>Entero</td>
+    <td>ID de la categoría</td>
+  </tr>
+</table>
+<h3 id='respuesta-4'>Respuesta</h3>
+<p>Si se añade con éxito, retorna &quot;OK&quot;.</p>
+<h2 id='quitar-producto'>Quitar Producto</h2>
+<p>Elimina un producto de una categoría.</p>
+<h3 id='metodo-5'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-5'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "deleteFromCategory"</td>
+  </tr>
+  <tr>
+    <td>productId</td>
+    <td>Entero</td>
+    <td>ID del producto</td>
+  </tr>
+  <tr>
+    <td>categoryId</td>
+    <td>Entero</td>
+    <td>ID de la categoría</td>
+  </tr>
+</table>
+<h3 id='respuesta-5'>Respuesta</h3>
+<p>Si se elimina con éxito, retorna &quot;OK&quot;.</p>
+<h1 id='configuraciones'>Configuraciones</h1><h2 id='crear-db'>Crear DB</h2><h2 id='notificaciones'>Notificaciones</h2><h1 id='contacto'>Contacto</h1><h2 id='crear'>Crear</h2><h2 id='modificar'>Modificar</h2><h2 id='eliminar'>Eliminar</h2><h1 id='customizaciones'>Customizaciones</h1><h2 id='crear'>Crear</h2>
+<p>Añade una propiedad customizable a un producto. Por ejemplo &quot;Tipo de Cuero&quot;.</p>
+<h3 id='metodo'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "newCustomization"</td>
+  </tr>
+  <tr>
+    <td>productId</td>
+    <td>Entero</td>
+    <td>ID del producto</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la customiación</td>
+  </tr>
+</table>
+<h3 id='respuesta'>Respuesta</h3>
+<p>Retorna el ID de la nueva customización.</p>
+<h2 id='modificar'>Modificar</h2>
+<p>Cambia el nombre de una customización.</p>
+<h3 id='metodo-2'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-2'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "updateCustomization"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la customización</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nuevo nombre de la customiación</td>
+  </tr>
+</table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<p>Si se modifica con éxito, retorna &quot;OK&quot;.</p>
+<h2 id='eliminar'>Eliminar</h2>
+<p>Elimina una customización, junto con sus opciones, y por ende las variaciones que generó del producto.</p>
+<h3 id='metodo-3'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-3'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "deleteCustomization"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la customización</td>
+  </tr>
+</table>
+<h3 id='respuesta-3'>Respuesta</h3>
+<p>Si se elimina con éxito, retorna &quot;OK&quot;.</p>
+<h1 id='imagenes'>Imágenes</h1><h2 id='listar'>Listar</h2>
+<p>Lista de todas las imágenes almacenadas.</p>
+<h3 id='metodo'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/images</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "list".</td>
+  </tr>
+</table>
+<h3 id='respuesta'>Respuesta</h3>
+<p>Retorna un arreglo de objetos en formato JSON, donde cada objeto posee la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la imagen</td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td>String</td>
+    <td>URL de la imagen</td>
+  </tr>
+</table>
+<h2 id='crear'>Crear</h2>
+<p>Crea una nueva imagen.</p>
+<h3 id='metodo-2'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/images</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-2'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "new".</td>
+  </tr>
+  <tr>
+    <td>imageURL</td>
+    <td>String</td>
+    <td>Url de la imagen (Opcional)</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>Bytes</td>
+    <td>Data de la imagen (Opcional), en este caso se debe utilizar FormData y los formatos aceptados son JPEG y PNG.</td>
+  </tr>
+</table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<p>Retorna el URL de la nueva imagen.</p>
+<h2 id='eliminar'>Eliminar</h2>
+<p>Elimina una imagen.</p>
+<h3 id='metodo-3'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/images</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-3'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "delete".</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la imagen a eliminar</td>
+  </tr>
+
+</table>
+<h3 id='respuesta-3'>Respuesta</h3>
+<p>Si la imagen se elimina, retorna &quot;Ok&quot;.</p>
+<h1 id='pedidos'>Pedidos</h1><h2 id='crear'>Crear</h2><h2 id='crear-manualmente'>Crear Manualmente</h2><h2 id='modificar'>Modificar</h2><h2 id='eliminar'>Eliminar</h2>
+<p>Elimina un pedido.</p>
+<h3 id='metodo'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/orders</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "delete"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del pedido a eliminar</td>
+  </tr>
+</table>
+<h3 id='respuesta'>Respuesta</h3>
+<p>Si el pedido se elimina con éxito, retorna &quot;Ok&quot;.</p>
+<h1 id='opciones'>Opciones</h1><h2 id='anadir'>Añadir</h2>
+<p>Añade una opción a una customización, por ejemplo &quot;Cuero Liso&quot;, y genera nuevas variaciones del producto.</p>
+<h3 id='metodo'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "addOptionToCustomization"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la customización</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la opción</td>
+  </tr>
+</table>
+<h3 id='respuesta'>Respuesta</h3>
+<p>Retorna el ID de la nueva opción.</p>
+<h2 id='modificar'>Modificar</h2>
+<p>Cambia el nombre de una opción de una customización.</p>
+<h3 id='metodo-2'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-2'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "updateCustomizationOption"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la opción</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nuevo nombre de la opción</td>
+  </tr>
+</table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<p>Si se modifica con éxito, retorna &quot;OK&quot;.</p>
+<h2 id='eliminar'>Eliminar</h2>
+<p>Elimina una opción de una customización, eliminando también las variaciones del productos generadas por esta.</p>
+<h3 id='metodo-3'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-3'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "deleteOptionFromCustomization"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la opción</td>
+  </tr>
+</table>
+<h3 id='respuesta-3'>Respuesta</h3>
+<p>Si se elimina con éxito, retorna &quot;OK&quot;.</p>
+<h1 id='productos'>Productos</h1><h2 id='listar-visibles'>Listar Visibles</h2>
+<p>Lista los productos visibles por los clientes.</p>
+<h3 id='metodo'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>No</td>
+  </tr>
+</table>
+<h3 id='envio'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "list".</td>
+  </tr>
+</table>
+<h3 id='respuesta'>Respuesta</h3>
+<p>Retorna un arreglo de objetos en formato JSON con los siguientes parámetros:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del producto</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>String</td>
+    <td>Nombre del producto</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>String</td>
+    <td>Descripción del producto</td>
+  </tr>
+  <tr>
+    <td>defaultPrice</td>
+    <td>Entero</td>
+    <td>Precio por defecto</td>
+  </tr>
+  <tr>
+    <td>defaultImage</td>
+    <td>String</td>
+    <td>URL de la imagen por defecto</td>
+  </tr>
+  <tr>
+    <td>categories</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de categorías a las cuales pertenece el producto</td>
+  </tr>
+  <tr>
+    <td>customizable</td>
+    <td>Bool</td>
+    <td>Indica si el producto es customizable</td>
+  </tr>
+  <tr>
+    <td>customizations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de customizaciones junto con sus opciones</td>
+  </tr>
+  <tr>
+    <td>variations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de variaciones del producto</td>
+  </tr>
+</table>
+
+<p>Donde los objetos del parámetro &quot;categories&quot; tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la categoría</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la categoría</td>
+  </tr>
+</table>
+
+<p>Los objetos del parámetro &quot;customizations&quot; tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la customización</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la customización</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de opciones ( id y nombre de la opción)</td>
+  </tr>
+</table>
+
+<p>Los objetos del parámetro &quot;variations&quot; tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la variación</td>
+  </tr>
+  <tr>
+    <td>productId</td>
+    <td>Entero</td>
+    <td>ID del producto asociado</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>String</td>
+    <td>URL de la imagen alternativa</td>
+  </tr>
+  <tr>
+    <td>price</td>
+    <td>Entero</td>
+    <td>Precio de la variación</td>
+  </tr>
+  <tr>
+    <td>optionsCombination</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de las combinaciónes de customizaciones que generan esta variación (ID de la costomización, ID de su opción)</td>
+  </tr>
+</table>
+<h2 id='listar-todos'>Listar Todos</h2>
+<p>Lista todos los productos.</p>
+<h3 id='metodo-2'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-2'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "listAll".</td>
+  </tr>
+</table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<p>Retorna un arreglo de objetos en formato JSON con los siguientes parámetros:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del producto</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>String</td>
+    <td>Nombre del producto</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>String</td>
+    <td>Descripción del producto</td>
+  </tr>
+  <tr>
+    <td>defaultPrice</td>
+    <td>Entero</td>
+    <td>Precio por defecto</td>
+  </tr>
+  <tr>
+    <td>defaultImage</td>
+    <td>String</td>
+    <td>URL de la imagen por defecto</td>
+  </tr>
+  <tr>
+    <td>categories</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de categorías a las cuales pertenece el producto</td>
+  </tr>
+  <tr>
+    <td>visible</td>
+    <td>Bool</td>
+    <td>Indica si el producto es visible por los clientes</td>
+  </tr>
+  <tr>
+    <td>customizable</td>
+    <td>Bool</td>
+    <td>Indica si el producto es customizable</td>
+  </tr>
+  <tr>
+    <td>customizations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de customizaciones junto con sus opciones</td>
+  </tr>
+  <tr>
+    <td>variations</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de variaciones del producto</td>
+  </tr>
+</table>
+
+<p>Donde los objetos del parámetro &quot;categories&quot; tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la categoría</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la categoría</td>
+  </tr>
+</table>
+
+<p>Los objetos del parámetro &quot;customizations&quot; tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la customización</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Nombre de la customización</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de opciones ( id y nombre de la opción)</td>
+  </tr>
+</table>
+
+<p>Los objetos del parámetro &quot;variations&quot; tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID de la variación</td>
+  </tr>
+  <tr>
+    <td>productId</td>
+    <td>Entero</td>
+    <td>ID del producto asociado</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>String</td>
+    <td>URL de la imagen alternativa</td>
+  </tr>
+  <tr>
+    <td>price</td>
+    <td>Entero</td>
+    <td>Precio de la variación</td>
+  </tr>
+  <tr>
+    <td>optionsCombination</td>
+    <td>Arreglo de Objetos</td>
+    <td>Lista de las combinaciónes de customizaciones que generan esta variación (ID de la costomización, ID de su opción)</td>
+  </tr>
+</table>
+<h2 id='crear'>Crear</h2>
+<p>Crea un nuevo producto.</p>
+<h3 id='metodo-3'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-3'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "new".</td>
+  </tr>
+</table>
+<h3 id='respuesta-3'>Respuesta</h3>
+<p>Retorna el ID del nuevo producto.</p>
+<h2 id='eliminar'>Eliminar</h2>
+<p>Elimina un producto junto con sus variaciones, y opciones de customización.</p>
+<h3 id='metodo-4'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/products</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-4'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "delete"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del producto a eliminar</td>
+  </tr>
+</table>
+<h3 id='respuesta-4'>Respuesta</h3>
+<p>Si el producto se elimina con éxito, retorna &quot;Ok&quot;.</p>
+<h1 id='slides'>Slides</h1><h2 id='crear'>Crear</h2>
+<p>Crea un nuevo slide.</p>
+<h3 id='metodo'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/slides</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "new".</td>
+  </tr>
+</table>
+<h3 id='respuesta'>Respuesta</h3>
+<p>Retorna el ID del nuevo slide.</p>
+<h2 id='listar-visibles'>Listar Visibles</h2>
+<p>Lista los slides visibles.</p>
+<h3 id='metodo-2'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/slides</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>No</td>
+  </tr>
+</table>
+<h3 id='envio-2'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "list".</td>
+  </tr>
+</table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<p>Arreglo de objetos en formato JSON, donde cada objeto tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del slide</td>
+  </tr>
+  <tr>
+    <td>contain</td>
+    <td>Bool</td>
+    <td>Modo de visualización</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>String</td>
+    <td>URL de la imagen</td>
+  </tr>
+</table>
+<h2 id='listar-todos'>Listar Todos</h2>
+<p>Lista todos los slides.</p>
+<h3 id='metodo-3'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/slides</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administador</td>
+  </tr>
+</table>
+<h3 id='envio-3'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "listAll".</td>
+  </tr>
+</table>
+<h3 id='respuesta-3'>Respuesta</h3>
+<p>Arreglo de objetos en formato JSON, donde cada objeto tiene la siguiente estructura:</p>
+
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del slide</td>
+  </tr>
+  <tr>
+    <td>visible</td>
+    <td>Bool</td>
+    <td>Si el slide es visible</td>
+  </tr>
+  <tr>
+    <td>contain</td>
+    <td>Bool</td>
+    <td>Modo de visualización</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>String</td>
+    <td>URL de la imagen</td>
+  </tr>
+  <tr>
+    <td>position</td>
+    <td>Entero</td>
+    <td>Orden del slide</td>
+  </tr>
+</table>
+<h2 id='eliminar'>Eliminar</h2>
+<p>Elimina un slide.</p>
+<h3 id='metodo-4'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/slides</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-4'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "delete".</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del slide a eliminar.</td>
+  </tr>
+</table>
+<h3 id='respuesta-4'>Respuesta</h3>
+<p>Si se elimina correctamente, retorna &quot;Ok&quot;.</p>
+<h2 id='modificar'>Modificar</h2>
+<p>Modifica un slide.</p>
+<h3 id='metodo-5'>Método</h3>
+<table class="met">
+  <tr>
+    <td>Método</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
+  </tr>
+  <tr>
+    <td>Path</td>
+    <td>/slides</td>
+  </tr>
+  <tr>
+    <td>Autentificación</td>
+    <td>Administrador</td>
+  </tr>
+</table>
+<h3 id='envio-5'>Envío</h3>
+<table class="jsn">
+  <tr>
+    <td>Key</td>
+    <td>Tipo</td>
+    <td>Descripción</td>
+  </tr>
+  <tr>
+    <td>request</td>
+    <td>String</td>
+    <td>Identifica la petición, debe contener "update"</td>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Entero</td>
+    <td>ID del slide a eliminar</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>Entero</td>
+    <td>ID de la nueva imagen del slide (Opcional)</td>
+  </tr>
+  <tr>
+    <td>contain</td>
+    <td>Bool</td>
+    <td>Modo en que se visualiza la imagen en su contenedor (Opcional)<br>Si es True: La imagen se muestra completa.<br>Si es False: La imagen ocupa todo el espacio del contenedor.</td>
+  </tr>
+  <tr>
+    <td>visible</td>
+    <td>Bool</td>
+    <td>Indica si el slide será visible por los clientes (Opcional)</td>
+  </tr>
+  <tr>
+    <td>position</td>
+    <td>Entero</td>
+    <td>Modifica el orden del slide (Opcional)</td>
+  </tr>
+</table>
+<h3 id='respuesta-5'>Respuesta</h3>
+<p>Si se elimina correctamente, retorna &quot;Ok&quot;.</p>
 
       </div>
       <div class="dark-box">
