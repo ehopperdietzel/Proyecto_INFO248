@@ -1,5 +1,13 @@
 # Administrador
 
+### Requisitos Funcionales
+
+* Panel de Administrador
+
+### Requisitos no Funcionales
+
+* Seguridad
+
 ## Iniciar Sesión
 
 Genera una PHP SESSION para manejar la sesión del administrador.<br>

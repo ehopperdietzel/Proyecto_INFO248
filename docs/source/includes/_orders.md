@@ -1,5 +1,15 @@
 # Pedidos
 
+### Requisitos Funcionales
+
+* Usuarios Generan Pedidos
+* Administrador Visualiza Pedidos
+* Administrador Modifica Pedidos
+
+### Requisitos no Funcionales
+
+* Usabilidad
+
 ## Crear
 
 ## Crear Manualmente
@@ -16,6 +26,10 @@ Elimina un pedido.
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>

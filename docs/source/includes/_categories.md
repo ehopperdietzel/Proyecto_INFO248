@@ -1,5 +1,13 @@
 # Categorías
 
+### Requisitos Funcionales
+
+* Clasificar Productos por Categoría
+
+### Requisitos no Funcionales
+
+* Usabilidad
+
 ## Crear
 
 Crea una nueva categoría de productos.
@@ -10,6 +18,10 @@ Crea una nueva categoría de productos.
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>
@@ -57,6 +69,10 @@ Elimina una categoría de productos, sin eliminar los productos.
     <td>POST</td>
   </tr>
   <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
+  </tr>
+  <tr>
     <td>Path</td>
     <td>/products</td>
   </tr>
@@ -102,6 +118,10 @@ Cambia el nombre de una categoría de productos.
     <td>POST</td>
   </tr>
   <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
+  </tr>
+  <tr>
     <td>Path</td>
     <td>/products</td>
   </tr>
@@ -145,6 +165,10 @@ Añade un producto a una categoría.
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>
@@ -195,6 +219,10 @@ Elimina un producto de una categoría.
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>

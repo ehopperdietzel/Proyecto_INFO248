@@ -1,5 +1,13 @@
 # Customizaciones
 
+### Requisitos Funcionales
+
+* Crear Productos Personalizables
+
+### Requisitos no Funcionales
+
+* Usabilidad
+
 ## Crear
 
 Añade una propiedad customizable a un producto. Por ejemplo "Tipo de Cuero".
@@ -10,6 +18,10 @@ Añade una propiedad customizable a un producto. Por ejemplo "Tipo de Cuero".
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>
@@ -62,6 +74,10 @@ Cambia el nombre de una customización.
     <td>POST</td>
   </tr>
   <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
+  </tr>
+  <tr>
     <td>Path</td>
     <td>/products</td>
   </tr>
@@ -110,6 +126,10 @@ Elimina una customización, junto con sus opciones, y por ende las variaciones q
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>

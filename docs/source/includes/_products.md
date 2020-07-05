@@ -1,5 +1,15 @@
 # Productos
 
+### Requisitos Funcionales
+
+* Administrador Crea Productos
+* Administrador Modifica productos
+* Administrador Customiza Productos
+
+### Requisitos no Funcionales
+
+* Usabilidad
+
 ## Listar Visibles
 
 Lista los productos visibles por los clientes.
@@ -10,6 +20,10 @@ Lista los productos visibles por los clientes.
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
   </tr>
   <tr>
     <td>Path</td>
@@ -183,6 +197,10 @@ Lista todos los productos.
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Utilitario</td>
   </tr>
   <tr>
     <td>Path</td>
@@ -363,6 +381,10 @@ Crea un nuevo producto.
     <td>POST</td>
   </tr>
   <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
+  </tr>
+  <tr>
     <td>Path</td>
     <td>/products</td>
   </tr>
@@ -401,6 +423,10 @@ Elimina un producto junto con sus variaciones, y opciones de customización.
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>

@@ -1,5 +1,13 @@
 # Slides
 
+### Requisitos Funcionales
+
+* Modificar Información del Sitio Web
+
+### Requisitos no Funcionales
+
+* Usabilidad
+
 ## Crear
 
 Crea un nuevo slide.

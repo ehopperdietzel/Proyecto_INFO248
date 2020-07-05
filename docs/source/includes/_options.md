@@ -1,5 +1,13 @@
 # Opciones
 
+### Requisitos Funcionales
+
+* Crear Productos Personalizables
+
+### Requisitos no Funcionales
+
+* Usabilidad
+
 ## Añadir
 
 Añade una opción a una customización, por ejemplo "Cuero Liso", y genera nuevas variaciones del producto.
@@ -10,6 +18,10 @@ Añade una opción a una customización, por ejemplo "Cuero Liso", y genera nuev
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>
@@ -62,6 +74,10 @@ Cambia el nombre de una opción de una customización.
     <td>POST</td>
   </tr>
   <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
+  </tr>
+  <tr>
     <td>Path</td>
     <td>/products</td>
   </tr>
@@ -110,6 +126,10 @@ Elimina una opción de una customización, eliminando también las variaciones d
   <tr>
     <td>Método</td>
     <td>POST</td>
+  </tr>
+  <tr>
+    <td>Clasificación</td>
+    <td>Empresarial</td>
   </tr>
   <tr>
     <td>Path</td>

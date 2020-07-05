@@ -1,6 +1,9 @@
 <?php
 
-include "../api/lib/MySQL-Utils.php";
+include "../lib/MySQL-Utils.php";
+include "../lib/Request-Validator.php";
+
+checkAdminLogin();
 
 function createTable($section, $conn, $sql)
 {

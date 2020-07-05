@@ -1,5 +1,14 @@
 # Imágenes
 
+### Requisitos Funcionales
+
+* Modificar Slides de la Página de Inicio
+* Asignar Imagen a Productos
+
+### Requisitos no Funcionales
+
+* Optimización
+
 ## Listar
 
 Lista de todas las imágenes almacenadas.
